@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- CONTRATOS -->
+
+  <!-- VISTA FORMULARIO DEL REGISTRO -->
+  <record id="isn_contratos_form_view" model="ir.ui.view">
+    <field name="name">isn.contratos.form</field>
+    <field name="model">isn.contratos</field>
+    <field name="arch" type="xml">
+      <form string="Formulario Contratos">
+        <sheet>
+          <group>
+            <field name="nro_contrato"/>
+            <field name="identificador"/>
+            <field name="cod_serv"/>
+            <field name="cantidad"/>
+            <field name="fecha_exp"/>
+            <field name="activo"/>
+            <field name="tipo_contrato"/>
+            <field name="name"/>
+            <field name="instancia_sql"/>
+            <field name="data_base"/>
+            <field name="user_sql"/>
+            <field name="pass_sql"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <!-- VISTA DE LISTA DE ARBOL VIEW_TREE -->
+  <record id="isn_contratos_view_tree" model="ir.ui.view">
+    <field name="name">isn.contratos.view_tree</field>
+    <field name="model">isn.contratos</field>
+    <field name="arch" type="xml">
+      <tree string="Campos del contrato">
+        <field name="nro_contrato"/>
+        <field name="identificador"/>
+        <field name="cod_serv"/>
+        <field name="cantidad"/>
+        <field name="fecha_exp"/>
+        <field name="activo"/>
+        <field name="tipo_contrato"/>
+        <field name="name"/>
+        <field name="instancia_sql"/>
+            <field name="data_base"/>
+            <field name="user_sql"/>
+            <field name="pass_sql"/>
+      </tree>
+    </field>
+  </record>
+
+  <!-- ACTION VIEW -->
+  <record id="isn_contratos_action_view" model="ir.actions.act_window">
+    <field name="name">Gestion de contratos</field>
+    <field name="res_model">isn.contratos</field>
+    <field name="view_mode">tree,form</field>
+     <field name="help" type="html">
+      <p class="oe_view_nocontent_create">Crea el primer contrato</p>
+    </field>
+  </record>
+
+  <!-- RECORD PARA ASIGNAR EL USUARIO AL REGISTRO -->
+  <record model="ir.ui.view" id="isn_contratos_view_tree">
+    <field name="name">isn.contratos.view_tree</field>
+    <field name="model">isn.contratos</field>
+    <field name="arch" type="xml">
+      <field name="nro_contrato"/>
+      <field name="identificador"/>
+      <field name="cod_serv"/>
+      <field name="cantidad"/>
+      <field name="fecha_exp"/>
+      <field name="activo"/>
+      <field name="tipo_contrato"/>
+      <field name="name"/>
+      <field name="instancia_sql"/>
+            <field name="data_base"/>
+            <field name="user_sql"/>
+            <field name="pass_sql"/>
+    </field>
+  </record>
+
+
+
+
+</odoo>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="parche_isn_view_partner_servidor_sql" model="ir.ui.view">
+            <field name="name">parche_isn.view.partner.servidor_sql</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="category_id" position="after" >
+                    <field name="servidor_sql"/>
+                </field>
+                 <field name="category_id" position="after" >
+                    <field name="conexion_contab"/>
+                </field>
+                <field name="category_id" position="after" >
+                    <field name="licencia_saint"/>
+                </field>
+                <field name="category_id" position="after" >
+                    <field name="serial_saint"/>
+                </field>
+                <page name="internal_notes" position="after">
+                    <group string="Contratos de licencias">
+                    <field name="nros_contratos">
+                                    <tree string="Contratos del cliente">
+                                      <field name="nro_contrato"/>
+                                      <field name="identificador"/>
+                                      <field name="fecha_exp"/>
+                                      <field name="name"/>
+                                    </tree>
+                                </field>
+                    </group>
+                </page>
+            </field>
+        </record>
+    </data>
+</odoo>
